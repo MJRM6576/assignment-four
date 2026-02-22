@@ -38,56 +38,60 @@
                 <p class="font-semibold">Available Jobs</p>
             </div>
             <div class="flex gap-2">
-                <p>0</p>
+                <p id="total-jobs">0</p>
                 <p>Jobs</p>
             </div>
         </div>
         <!-- Filter Button -->
         <div id="allFilterBtn" class="mb-6">
-            <button id="all-filter-btn" class="btn bg-blue-500 shadow-2xl text-white" >All</button>
-            <button id="interview-filter-btn" class="btn shadow-2xl " >Interview</button>
-            <button  id="rejected-filter-btn" class="btn shadow-2xl " >Rejected</button>
+            <button onclick="filterBtnStyle('all-filter-btn')" id="all-filter-btn" class="btn bg-blue-500 shadow-2xl text-white" >All</button>
+            <button onclick="filterBtnStyle('interview-filter-btn')" id="interview-filter-btn" class="btn shadow-2xl " >Interview</button>
+            <button onclick="filterBtnStyle('rejected-filter-btn')" id="rejected-filter-btn" class="btn shadow-2xl " >Rejected</button>
         </div>
+        <!-- Emty Filter Card Section-->
+         <section id="filter-section" class="hidden">
+
+         </section>
 
         <!-- Card Section -->
-         <section id="allCards " class="space-y-5">
+         <section id="allCards" class="space-y-5">
             <!-- Card 1 -->
-             <div id="cardOne" class=" flex justify-between border p-8">
+             <div class=" cards flex justify-between border p-8">
                 <!-- left side -->
                 <div class="space-y-4">
                     <div>
                         <p class="jobPosition text-3xl font-semibold">Mobile First Corp</p>
                         <p class="skilBase text-gray-400">React Native Developer</p>
                     </div>
-                    <p>Remote Full-time $130,000 - $175,000</p>
+                    <p class="salary">Remote Full-time $130,000 - $175,000</p>
                     <p class="statu"> Not Aplicable </p>
                     <p class="notes">Build cross-platform mobile applications users worldwide.</p>
                     <div>
-                        <button class="btn text-green-500">interview</button>
-                        <button class="btn text-red-500">Rejected</button>
+                        <button class="btn inter-btn text-green-500">Interview</button>
+                        <button class="btn reject-btn text-red-500">Rejected</button>
                     </div>
 
                 </div>
                 <!-- Right side-->
                  <div>
-                    <button class="btn text-red-500 bg-red-200"><i class="fa-solid fa-trash-can"></i></button>
+                    <button  class="btn delete-btn text-red-500 bg-red-200"><i class="fa-solid fa-trash-can"></i></button>
                  </div>
 
              </div>
             <!-- Card 2 -->
-             <div id="cardOne" class=" flex justify-between border p-8">
+             <div class="cards flex justify-between border p-8">
                 <!-- left side -->
                 <div class="space-y-4">
                     <div>
                         <p class="jobPosition text-3xl font-semibold">WebFlow Agency</p>
                         <p class="skilBase text-gray-400">Web Designer & Developer</p>
                     </div>
-                    <p>Remote Full-time $80,000 - $120,000</p>
+                    <p class="salary">Remote Full-time $80,000 - $120,000</p>
                     <p class="statu"> Not Aplicable </p>
                     <p class="notes">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
                     <div>
-                        <button class="btn text-green-500">interview</button>
-                        <button class="btn text-red-500">Rejected</button>
+                        <button class="btn inter-btn text-green-500">Interview</button>
+                        <button class="btn reject-btn text-red-500">Rejected</button>
                     </div>
 
                 </div>
@@ -98,19 +102,19 @@
 
              </div>
             <!-- Card 3 -->
-             <div id="cardOne" class=" flex justify-between border p-8">
+             <div class="cards flex justify-between border p-8">
                 <!-- left side -->
                 <div class="space-y-4">
                     <div>
                         <p class="jobPosition text-3xl font-semibold">DataViz Solutions</p>
                         <p class="skilBase text-gray-400">Data Visualization Specialist</p>
                     </div>
-                    <p>Remote Full-time $125,000 - $165,000</p>
+                    <p class="salary">Remote Full-time $125,000 - $165,000</p>
                     <p class="statu"> Not Aplicable </p>
                     <p class="notes">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
                     <div>
-                        <button class="btn text-green-500">interview</button>
-                        <button class="btn text-red-500">Rejected</button>
+                        <button class="btn inter-btn text-green-500">Interview</button>
+                        <button class="btn reject-btn text-red-500">Rejected</button>
                     </div>
 
                 </div>
@@ -121,19 +125,19 @@
 
              </div>
             <!-- Card 4 -->
-             <div id="cardOne" class=" flex justify-between border p-8">
+             <div class="cards flex justify-between border p-8">
                 <!-- left side -->
                 <div class="space-y-4">
                     <div>
                         <p class="jobPosition text-3xl font-semibold">CloudFirst Inc</p>
                         <p class="skilBase text-gray-400">Backend Developer</p>
                     </div>
-                    <p>Remote Full-time $140,000 - $190,000</p>
+                    <p class="salary">Remote Full-time $140,000 - $190,000</p>
                     <p class="statu"> Not Aplicable </p>
                     <p class="notes">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
                     <div>
-                        <button class="btn text-green-500">interview</button>
-                        <button class="btn text-red-500">Rejected</button>
+                        <button class="btn inter-btn text-green-500">Interview</button>
+                        <button class="btn reject-btn text-red-500">Rejected</button>
                     </div>
 
                 </div>
@@ -144,19 +148,19 @@
 
              </div>
             <!-- Card 5 -->
-             <div id="cardOne" class=" flex justify-between border p-8">
+             <div class="cards flex justify-between border p-8">
                 <!-- left side -->
                 <div class="space-y-4">
                     <div>
                         <p class="jobPosition text-3xl font-semibold">Innovation Labs</p>
                         <p class="skilBase text-gray-400">UI/UX Engineer</p>
                     </div>
-                    <p>Remote Full-time $110,000 - $150,000</p>
+                    <p class="salary">Remote Full-time $110,000 - $150,000</p>
                     <p class="statu"> Not Aplicable </p>
                     <p class="notes">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
                     <div>
-                        <button class="btn text-green-500">interview</button>
-                        <button class="btn text-red-500">Rejected</button>
+                        <button class="btn inter-btn text-green-500">Interview</button>
+                        <button class="btn reject-btn text-red-500">Rejected</button>
                     </div>
 
                 </div>
@@ -167,19 +171,19 @@
 
              </div>
             <!-- Card 6 -->
-             <div id="cardOne" class=" flex justify-between border p-8">
+             <div class="cards flex justify-between border p-8">
                 <!-- left side -->
                 <div class="space-y-4">
                     <div>
                         <p class="jobPosition text-3xl font-semibold">MegaCorp Solutions</p>
                         <p class="skilBase text-gray-400">JavaScript Developer</p>
                     </div>
-                    <p>Remote Full-time $130,000 - $170,00</p>
+                    <p class="salary">Remote Full-time $130,000 - $170,00</p>
                     <p class="statu"> Not Aplicable </p>
                     <p class="notes">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
                     <div>
-                        <button class="btn text-green-500">interview</button>
-                        <button class="btn text-red-500">Rejected</button>
+                        <button class="btn inter-btn text-green-500">Interview</button>
+                        <button class="btn reject-btn text-red-500">Rejected</button>
                     </div>
 
                 </div>
@@ -190,19 +194,19 @@
 
              </div>
             <!-- Card 7 -->
-             <div id="cardOne" class=" flex justify-between border p-8">
+             <div class="cards flex justify-between border p-8">
                 <!-- left side -->
                 <div class="space-y-4">
                     <div>
                         <p class="jobPosition text-3xl font-semibold">StartupXYZ</p>
                         <p class="skilBase text-gray-400">Full Stack Engineer</p>
                     </div>
-                    <p>Remote Full-time $120,000 - $160,000</p>
+                    <p class="salary">Remote Full-time $120,000 - $160,000</p>
                     <p class="statu"> Not Aplicable </p>
                     <p class="notes">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
                     <div>
-                        <button class="btn text-green-500">interview</button>
-                        <button class="btn text-red-500">Rejected</button>
+                        <button class="btn inter-btn text-green-500">Interview</button>
+                        <button class="btn reject-btn text-red-500">Rejected</button>
                     </div>
 
                 </div>
@@ -213,19 +217,19 @@
 
              </div>
             <!-- Card 8 -->
-             <div id="cardOne" class=" flex justify-between border p-8">
+             <div  class="cards flex justify-between border p-8">
                 <!-- left side -->
                 <div class="space-y-4">
                     <div>
                         <p class="jobPosition text-3xl font-semibold">TechCorp Industries</p>
                         <p class="skilBase text-gray-400">Senior Frontend Developer</p>
                     </div>
-                    <p>Remote Full-time  $130,000 - $175,000</p>
+                    <p class="salary">Remote Full-time  $130,000 - $175,000</p>
                     <p class="statu"> Not Aplicable </p>
                     <p class="notes">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
                     <div>
-                        <button class="btn text-green-500">interview</button>
-                        <button class="btn text-red-500">Rejected</button>
+                        <button class="btn inter-btn text-green-500">Interview</button>
+                        <button class="btn reject-btn text-red-500">Rejected</button>
                     </div>
 
                 </div>
