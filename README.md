@@ -7,7 +7,8 @@ Ans: newDiv = document.createElement("div");
  insert korte amra .appendChild(newDiv); use kori
 
 ### 3. What is Event Bubbling? And how does it work?
-Ans: Bubbling holo parent ar dike uourer eliment ar kase jai
+Ans: Bubbling holo parent ar dike uporer eliment ar kase jai
+html/root<body<div<p
 
 ### 4. What is Event Delegation in JavaScript? Why is it useful?
 Ans: childe theke parentNode ba parent theke childeNode terge a click check korar jonno babohar kora hoy.
