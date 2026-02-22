@@ -10,6 +10,49 @@
     <title>Job Application Tracker</title>
 </head>
 <body>
-    <button class="btn bg-green-300">her</button>
+    <header class="w-[70%] mx-auto">
+        <h1 class="text-2xl text-black font-bold">Job Application Tracker</h1>
+        <!-- Count card -->
+        <div class="grid grid-cols-3 gap-8 my-4 ">
+            <div class="shadow-md p-4 rounded-xl">
+                <p>Total</p>
+                <p id="total">0</p>
+            </div>
+            <div class="shadow-md p-4 rounded-xl">
+                <p>Interview</p>
+                <p id="Interview" class="text-green-500">0</p>
+            </div>
+            <div class="shadow-md p-4 rounded-xl">
+                <p>Rejected</p>
+                <p id="Rejected" class="text-red-500">0</p>
+            </div>
+        </div>
+    </header>
+    <hr class="text-gray-200 mt-8">
+
+    <main class="w-[70%] mx-auto my-6">
+        <!-- Filter Count -->
+        <div class="flex justify-between mb-4">
+            <div>
+                <p>Available Jobs</p>
+            </div>
+            <div class="flex gap-2">
+                <p>0</p>
+                <p>Jobs</p>
+            </div>
+        </div>
+        <!-- Filter Button -->
+        <div id="allFilterBtn">
+            <button id="all-filter-btn" class="btn bg-blue-500 shadow-2xl text-white" >All</button>
+            <button id="interview-filter-btn" class="btn shadow-2xl " >Interview</button>
+            <button  id="rejected-filter-btn" class="btn shadow-2xl " >Rejected</button>
+        </div>
+
+        <!-- Card Section -->
+         <section>
+            <!-- Card 1 -->
+            
+         </section>
+    </main>
 </body>
 </html>
